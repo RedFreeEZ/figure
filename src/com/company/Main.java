@@ -31,7 +31,7 @@ public class Main {
                     break;
                 case "Rectangle":
                     for (int j = 0; j < i; j++) {
-                        addRectangle(380, 380,380,380);
+                        addRectangle(380, 380);
                     }
                     break;
                 case "Both":
@@ -40,7 +40,7 @@ public class Main {
                         addCircle(390, 390);
                     }
                     for (int j = mid; j < i; j++) {
-                        addRectangle(380, 380,380,380);
+                        addRectangle(380, 380);//380,380
                     }
                     break;
             }
@@ -62,8 +62,8 @@ public class Main {
             repaint();
         }
 
-        public void addRectangle(int maxX, int maxY,int maxW,int maxH) {
-            shapes.add(new Rectangle(random.nextInt(maxX), random.nextInt(maxY),random.nextInt(maxW),random.nextInt(maxH)));
+        public void addRectangle(int maxX, int maxY) {//,int maxW,int maxH
+            shapes.add(new Rectangle(random.nextInt(maxX), random.nextInt(maxY)));//,random.nextInt(maxW),random.nextInt(maxH)
             repaint();
         }
 
